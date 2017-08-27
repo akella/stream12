@@ -1,0 +1,13 @@
+.akella-fps{
+	position: fixed;
+	z-index: 9999;
+	left: 10px;
+	top: 10px;
+	background: linear-gradient(#87f1e3 0,#54b7e2 100%);
+	border-radius: 6px;
+	overflow: hidden;
+	display: none;
+}
+.akella-fps.is-visible{
+	display: block;
+}

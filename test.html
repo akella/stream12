@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque repellat ea sint officia, laboriosam, deleniti repellendus aut sequi quidem dolorum incidunt. Nisi sapiente necessitatibus animi itaque commodi dolores optio enim.</div>
+	<div>Dolor maxime repudiandae enim asperiores placeat, laborum, recusandae dicta a blanditiis iusto accusamus vitae, quos unde. Perferendis accusamus quidem ab magni culpa quisquam commodi ut aspernatur esse itaque, dolores non.</div>
+	<div>Ea modi deleniti, assumenda quae iure pariatur, error sed corrupti voluptatum quibusdam, ab sit laudantium. Nihil quidem, at quo qui eaque repellendus, suscipit tempore iste similique molestias minima. Consectetur, accusamus.</div>
+	<div>Quae aliquid saepe maxime similique obcaecati sequi culpa minima accusantium inventore possimus, iusto ullam! Aspernatur autem neque, animi, qui adipisci ea, repellendus nihil fuga ipsa eveniet accusantium aliquam? Inventore, rerum.</div>
+	<div>Facilis consequuntur quo iste distinctio excepturi et nemo, facere voluptatum, laudantium iusto illo non, neque eum magni aliquid qui fugiat dolorum minima? Quos modi cupiditate quaerat iusto inventore id repudiandae.</div>
+	<div>Eum optio, natus doloremque rerum praesentium totam illo beatae tenetur quod cumque dicta accusantium recusandae eveniet reprehenderit, cum assumenda error. Quis, veniam praesentium provident dolor iste incidunt mollitia saepe tenetur.</div>
+	<div>Laborum perferendis voluptates natus dolores voluptatibus sequi laudantium odit beatae laboriosam facilis ipsa odio voluptas, nulla soluta quisquam, porro ad ut distinctio. Perspiciatis optio inventore, est commodi quod excepturi consectetur!</div>
+	<div>Placeat reiciendis nemo vel iure debitis culpa suscipit recusandae deleniti distinctio ipsa labore, fugiat molestiae error, doloribus repellat excepturi, asperiores sequi perferendis nesciunt voluptas, maiores. Aliquam aperiam neque exercitationem repudiandae.</div>
+	<div>Vel odit, officia optio earum dignissimos adipisci vitae, tenetur doloremque mollitia veritatis repudiandae dicta at iure sunt est. Dicta, laudantium, est. Vel magni fuga recusandae esse iure delectus rem necessitatibus.</div>
+	<div>Quis in exercitationem minima ipsam officia, alias quos iusto, veritatis nostrum eius voluptatum qui necessitatibus quibusdam possimus rerum voluptates ducimus excepturi et doloremque consequatur, explicabo, nulla illo debitis! Quos, incidunt.</div>
+	<div>Est mollitia, sapiente sequi iure, molestias sint! Sequi atque beatae id, cum magnam, similique dolorum quod, sapiente ipsa reprehenderit placeat eligendi pariatur inventore error dolore voluptates fugiat natus excepturi. Eveniet.</div>
+	<div>Animi nemo corporis, cum quia doloribus ratione esse nulla quaerat molestias iusto pariatur perferendis velit inventore, distinctio eligendi ipsum eius odio consectetur ad quae nobis et possimus maiores. Reprehenderit, eveniet.</div>
+	<div>Ut velit dignissimos cumque incidunt quod deleniti eius, enim sequi nulla accusamus. Nemo asperiores voluptas id vitae voluptatum rerum, nihil voluptates iusto blanditiis, error! Ipsum laudantium laboriosam consectetur porro. Corrupti.</div>
+	<div>Dolores nobis magnam debitis odit sequi, repellendus soluta quia, ea animi vero ut harum minima repudiandae consequuntur temporibus saepe obcaecati quis excepturi neque odio maiores quibusdam? Sed quos, vel alias.</div>
+	<div>Mollitia suscipit possimus reprehenderit ullam magni ab atque iste cum, temporibus natus, error rerum esse odit hic culpa ut repellendus est! Pariatur id eos magni, nam repudiandae animi veniam molestias.</div>
+	<div>Commodi ipsum quam minus iste fuga voluptas quod maxime atque neque, eaque totam suscipit facere tenetur recusandae dignissimos reprehenderit quia animi esse quidem ut eius exercitationem expedita! Velit reprehenderit, voluptas!</div>
+	<div>Quasi ipsam molestias quod perferendis id libero nobis repellendus delectus, molestiae blanditiis in officiis alias sint dolores, nesciunt odit veritatis quam illo iste praesentium ea quis accusantium itaque, impedit! Adipisci.</div>
+	<div>Quo dolore dolorem blanditiis, natus et vitae accusamus possimus explicabo dolores, perspiciatis dolor ipsam adipisci aliquid iste quisquam, fugit at ullam aut cum magni porro sunt. Temporibus natus, quos alias.</div>
+	<div>Aperiam fugiat debitis maiores sint aliquid, quos, dolore, blanditiis eius quasi laudantium quo! Eos error omnis ut saepe est voluptas delectus pariatur aut aliquid, architecto id, mollitia quibusdam quas inventore.</div>
+	<div>Facilis libero iste aperiam impedit eius odit quidem architecto perferendis sit. Sint illum quia aliquid facilis atque maiores impedit voluptatibus, rerum quis dolorem, accusamus eum error corporis doloribus non? Vitae?</div></div>
+
+	<style>
+		body{
+			font-size: 40px;
+			line-height: 1.3;
+		}
+		.akella-fps{
+			position: fixed;
+			z-index: 9999;
+			left: 10px;
+			top: 10px;
+			background: linear-gradient(#87f1e3 0,#54b7e2 100%);
+			border-radius: 6px;
+			overflow: hidden;
+			display: none;
+		}
+		.akella-fps.is-visible{
+			display: block;
+		}
+	</style>
+
+	<script>
+		class FPS{
+			constructor(){
+				this.width = 150;
+				this.height = 65;
+
+				this.canvas = document.createElement('canvas');
+				this.ctx = this.canvas.getContext('2d');
+				
+				this.canvas.width = this.width;
+				this.canvas.height = this.height;
+				this.canvas.classList.add('akella-fps');
+				this.ctx.font = "bold 26px Arial";
+				this.startTime = 0;
+				this.frame = 0;
+				this.allFPS = [];
+				this.hidden = true;
+				this.playing = false;
+				document.body.appendChild(this.canvas);
+				var that = this;
+				this.canvas.addEventListener('click',function(){
+					that.playpause();
+				})
+			}
+			playpause(){
+				this.playing = this.playing? false : true;
+				if(this.playing) this.loop();
+			}
+			toggle(){
+				this.hidden = this.hidden? false : true;
+				if(!this.hidden) {
+					this.loop();
+					this.canvas.classList.add('is-visible');
+				} else{
+					this.canvas.classList.remove('is-visible');
+				}
+			}
+			loop(){
+				if(this.hidden || !this.playing) return false;
+				var that = this;
+				window.requestAnimationFrame(function(){
+					that.draw();
+					that.loop();
+				})
+			}
+			add(x){
+				this.allFPS.unshift(x);
+				this.allFPS = this.allFPS.slice(0,this.width);
+			}
+			draw(){
+				var currentFPS = this.getFPS();
+				this.add(currentFPS);
+				this.ctx.clearRect(0,0,this.width,this.height);
+				for(var i = 0; i<=this.width; i++){
+					this.ctx.fillStyle = '#000000';
+					this.ctx.fillRect(i,0,1,5 + 60 - this.allFPS[i]);
+					this.ctx.fillStyle = "#ffffff";
+					this.ctx.fillRect(i,5 + 60 - this.allFPS[i],1,2);
+				}
+				this.ctx.fillStyle = '#000000';
+				this.ctx.fillText(currentFPS + ' fps', 21, 51);
+				this.ctx.fillStyle = "#ffffff";
+				this.ctx.fillText(currentFPS + ' fps', 20, 50);
+			}
+			getFPS(){
+				this.frame++;
+
+				var d =  Date.now();
+				this.currentTime = (d - this.startTime) / 1000;
+				var result = Math.floor(this.frame / this.currentTime);
+				if(this.currentTime > 1){
+				  this.startTime = Date.now();
+				  this.frame = 0;
+				}
+				return result;
+
+			}
+		}
+
+
+		var fps = new FPS;
+		fps.toggle();
+		fps.playpause();
+	</script>
+</body>
+</html>
